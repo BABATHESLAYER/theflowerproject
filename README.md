@@ -2,7 +2,10 @@
 
 A web-based interactive tool to build custom floral bouquets using SVG layers.
 
-live link:-
+live link:-https://babatheslayer.github.io/theflowerproject/
+
+<img width="1900" height="872" alt="image" src="https://github.com/user-attachments/assets/8c07a672-13a6-4dbf-b1b8-c3012653e20c" />
+
 
 ## Project Structure
 - `assets/` : Contains all SVGs (Flowers, Wrappers, Ties, Canvas).
