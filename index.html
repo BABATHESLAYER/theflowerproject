@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Flower Project - Bouquet Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>THE FLOWER PROJECT</h1>
+    <p>High-fidelity bouquet builder (Sandwich Layering Method)</p>
+  </header>
+
+  <main class="app-shell">
+    <aside class="panel library">
+      <section class="panel-section">
+        <h2>Success: Wrap Color</h2>
+        <div class="swatches" id="wrapper-controls"></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Flowers (click to add/remove)</h2>
+        <div class="grid" id="flower-library"></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Ties</h2>
+        <div class="grid" id="tie-library"></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Layer Stack</h2>
+        <div id="layer-panel"></div>
+        <div class="layer-actions">
+          <button id="layer-up" type="button">Bring Up</button>
+          <button id="layer-down" type="button">Send Down</button>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Download</h2>
+        <div class="download-row">
+          <span>Use download controls under the canvas.</span>
+        </div>
+      </section>
+    </aside>
+
+    <section class="canvas-wrapper">
+      <div id="canvas">
+        <img id="back-wrapper" class="layer" src="assets/wrappers/wrappers_back/pinkback.svg" alt="Back wrapper layer" />
+        <div id="flower-layer"></div>
+        <img id="front-wrapper" class="layer" src="assets/wrappers/wrapers_front/pinkfront.svg" alt="Front wrapper layer" />
+        <img id="tie-layer" class="layer" src="" alt="Tie layer" />
+      </div>
+    </section>
+
+    <aside class="panel library-right">
+      <section class="panel-section">
+        <h2>Quick Actions</h2>
+        <button id="layer-up-right" style="width:100%; margin-bottom: 0.5rem;">Bring Up</button>
+        <button id="layer-down-right" style="width:100%; margin-bottom: 0.5rem;">Send Down</button>
+      </section>
+
+      <section class="panel-section">
+        <h2>Layer Move & Style</h2>
+        <label for="layer-select">Active Layer</label>
+        <select id="layer-select">
+          <option value="back-wrapper">Back Wrapper</option>
+          <option value="front-wrapper">Front Wrapper</option>
+          <option value="tie">Tie</option>
+          <option value="flower">Flower</option>
+        </select>
+
+        <label for="flower-select">Selected Flower</label>
+        <select id="flower-select" style="width:100%; margin-bottom: 0.75rem;"></select>
+
+        <div class="knob-group">
+          <div class="knob-container">
+            <label>X</label>
+            <input id="knob-x" type="range" min="-500" max="500" value="0" class="knob-input" />
+            <span id="knob-x-val" class="knob-value">0</span>
+          </div>
+          <div class="knob-container">
+            <label>Y</label>
+            <input id="knob-y" type="range" min="-500" max="500" value="0" class="knob-input" />
+            <span id="knob-y-val" class="knob-value">0</span>
+          </div>
+          <div class="knob-container">
+            <label>Scale</label>
+            <input id="knob-scale" type="range" min="1" max="300" value="100" class="knob-input" />
+            <span id="knob-scale-val" class="knob-value">100</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Download</h2>
+        <div class="download-area">
+          <button id="download-btn" type="button" style="width: 100%;">Download Bouquet as PNG</button>
+          <button id="reset-btn" type="button" style="width: 100%;">Reset</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
